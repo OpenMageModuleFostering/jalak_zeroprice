@@ -29,7 +29,8 @@ class Jalak_Zeroprice_Block_Rewrite_Catalog_Product_Price extends Mage_Catalog_B
     protected function _toHtml()
     {
         $helper = Mage::helper('jalak_zeroprice');
-        if ($helper->isEnabled() && !($this->getProduct()->price > $helper->priceValue()))
+
+        if ($helper->isEnabled() && $this->getProduct()->price < $helper->priceValue())
             return '';
 
         return parent::_toHtml();

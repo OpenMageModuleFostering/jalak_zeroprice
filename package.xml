@@ -1,18 +1,24 @@
 <?xml version="1.0"?>
 <package>
     <name>Jalak_Zeroprice</name>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL 3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>Hide price product and add to cart button with condition price value.</summary>
     <description>Hide price product and add to cart button with condition price value.</description>
-    <notes>1.0.0 First Release</notes>
+    <notes>1.0.0&#xD;
+- First Release&#xD;
+&#xD;
+1.1.0&#xD;
+- Update for support  Magento version 1.9.0.1&#xD;
+- Fix bug in product group&#xD;
+- Fix bug for dynamic theme (custom theme)</notes>
     <authors><author><name>I Gusti Agung Mahendra Putra</name><user>hendrathings</user><email>hendrathings@gmail.com</email></author></authors>
-    <date>2014-04-25</date>
-    <time>08:26:45</time>
-    <contents><target name="magecommunity"><dir name="Jalak"><dir name="Zeroprice"><dir name="Block"><dir name="Rewrite"><dir name="Catalog"><dir name="Product"><file name="Price.php" hash="7d069d6c940c648aebc2e72256a47d95"/></dir></dir></dir></dir><file name="Exception.php" hash="fd6361fe33f604679d24fefeabb52d44"/><dir name="Helper"><file name="Data.php" hash="0c155c0e4c3bf45dc5bac6d2082548df"/></dir><dir name="etc"><file name="adminhtml.xml" hash="54bd1269e41f914cf8536fe54c5eec9d"/><file name="config.xml" hash="a40772b0261631d9294fecc62454f395"/><file name="system.xml" hash="ad0cf62b02eacbe06fdc690e179d0573"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="jalak_zeroprice.xml" hash="dc543646b7dba81031fce0f034031188"/></dir><dir name="template"><dir name="jalak_zeroprice"><dir name="catalog"><dir name="product"><file name="list.phtml" hash="c3c0b133f2a8d294798de5b166e1b067"/><dir name="view"><file name="addtocart.phtml" hash="f968d55e75894f650a195c1665ddb72e"/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Jalak_Zeroprice.xml" hash="65ac2e77d3938c0cff55cf1c8cfe9370"/></dir></target></contents>
+    <date>2014-08-01</date>
+    <time>17:35:39</time>
+    <contents><target name="magecommunity"><dir name="Jalak"><dir name="Zeroprice"><dir name="Block"><dir name="Rewrite"><dir name="Catalog"><dir name="Product"><file name="Price.php" hash="1649d641b071baee23f92b264c511cff"/></dir></dir></dir></dir><file name="Exception.php" hash="fd6361fe33f604679d24fefeabb52d44"/><dir name="Helper"><file name="Data.php" hash="0c155c0e4c3bf45dc5bac6d2082548df"/></dir><dir name="etc"><file name="adminhtml.xml" hash="54bd1269e41f914cf8536fe54c5eec9d"/><file name="config.xml" hash="6dca987541c5fc8e60746ffc404e68dd"/><file name="system.xml" hash="ad0cf62b02eacbe06fdc690e179d0573"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="jalak_zeroprice.xml" hash="ba2e5e658669ed8273cfaf036598c88e"/></dir><dir name="template"><dir name="jalak_zeroprice"><dir name="catalog"><dir name="product"><file name="list.phtml" hash="c3c0b133f2a8d294798de5b166e1b067"/><file name="price.phtml" hash="c161ac94f0cfbc8c7c2dfbdffc19bf0e"/><dir name="view"><file name="addtocart.phtml" hash="2f18367d7d0f38b46924c2d825854d81"/><dir name="type"><file name="grouped.phtml" hash="65499b8cbd8e45041f361761ce09cb14"/></dir></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Jalak_Zeroprice.xml" hash="65ac2e77d3938c0cff55cf1c8cfe9370"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>comunity</channel><min>1.5.0.0</min><max>1.8.0.0</max></package></required></dependencies>
 </package>
