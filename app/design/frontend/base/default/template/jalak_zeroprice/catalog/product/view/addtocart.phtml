@@ -17,7 +17,7 @@ $_zeroPriceHelper = Mage::helper('jalak_zeroprice');
 ?>
 
 <?php $_product = $this->getProduct() ?>
-<?php if ($_zeroPriceHelper->getCanAddToCart()): ?>
+<?php if ($_zeroPriceHelper->getCanAddToCart() || $_product->getTypeID() == "bundle"): ?>
     <?php if ($_product->isSaleable()): ?>
         <div class="add-to-cart">
             <?php if (!$_product->isGrouped()): ?>

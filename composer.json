@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "",
-    "description": "Hide price product and add to cart button with condition price value.",
+    "description": "Make your catalog price hide from customer whenever the price is zero or setup what price you want to hide.",
     "authors": [
     {
         "name": "I Gusti Agung Mahendra Putra",

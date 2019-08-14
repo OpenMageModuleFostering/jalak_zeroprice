@@ -32,6 +32,8 @@ class Jalak_Zeroprice_Block_Rewrite_Catalog_Product_Price extends Mage_Catalog_B
 
         if ($helper->isEnabled() && $this->getProduct()->price < $helper->priceValue())
             return '';
+        
+        //return $this->getProduct()->getTypeID();
 
         return parent::_toHtml();
     }

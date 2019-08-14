@@ -386,7 +386,38 @@ $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simpleP
     ?>
     <?php if ($this->getDisplayMinimalPrice() && $_minimalPriceValue): ?>
         <div class="price-box">
-            <?php if ($_minimalPriceValue > $_zeroPriceHelper->priceValue()): ?>
+            <?php if ($_zeroPriceHelper->isEnabled()): ?>
+                <?php if ($_minimalPriceValue > $_zeroPriceHelper->priceValue()): ?>
+                    <p class="minimal-price">
+                        <span class="price-label"><?php echo $this->__('Starting at:') ?></span>
+                        <?php if ($_taxHelper->displayBothPrices()): ?>
+                            <span class="price-excluding-tax">
+                                <span class="label"><?php echo $this->helper('tax')->__('Excl. Tax:') ?></span>
+                                <span class="price" id="price-excluding-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                                    <?php echo $_coreHelper->currency($_exclTax, true, false) ?>
+                                </span>
+                            </span>
+                            <span class="price-including-tax">
+                                <span class="label"><?php echo $this->helper('tax')->__('Incl. Tax:') ?></span>
+                                <span class="price" id="price-including-tax-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                                    <?php echo $_coreHelper->currency($_inclTax, true, false) ?>
+                                </span>
+                            </span>
+                        <?php else: ?>
+                            <?php
+                            $_showPrice = $_inclTax;
+                            if (!$_taxHelper->displayPriceIncludingTax())
+                            {
+                                $_showPrice = $_exclTax;
+                            }
+                            ?>
+                            <span class="price" id="product-minimal-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
+                                <?php echo $_coreHelper->currency($_showPrice, true, false) ?>
+                            </span>
+                        <?php endif; ?>
+                    </p>
+                <?php endif; ?>
+            <?php else: ?>
                 <p class="minimal-price">
                     <span class="price-label"><?php echo $this->__('Starting at:') ?></span>
                     <?php if ($_taxHelper->displayBothPrices()): ?>
