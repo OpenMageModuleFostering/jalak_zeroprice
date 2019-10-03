@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Jalak_Zeroprice",
+    "name": "OpenMageModuleFostering\/Jalak_Zeroprice",
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "",
     "description": "Make your catalog price hide from customer whenever the price is zero or setup what price you want to hide.",
     "authors": [
-    {
-        "name": "I Gusti Agung Mahendra Putra",
-        "email": "hendrathings@gmail.com"
-    }
-],
+        {
+            "name": "I Gusti Agung Mahendra Putra",
+            "email": "hendrathings@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
